@@ -1,0 +1,32 @@
+
+:root {
+    // Light Mode Colors (Default)
+    --light-bg: rgba(250, 249, 246, 1);
+    --light-text: rgba(51, 51, 51, 1);
+    // Primaries
+    --primary: rgba(196, 71, 39, 1);
+    --primary-hover: rgba(196, 71, 39, 0.8);
+    // Dark Mode Colors
+    --dark-bg: rgba(44, 44, 44, 1);
+    --dark-text: rgba(250, 249, 246, 1);
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: var(--light-bg);
+        --text: var(--light-text)
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--dark-bg);
+        --text: var(--dark-text)
+    }
+}
+:root[data-theme='dark'] {
+    --background: var(--dark-bg);
+    --text: var(--dark-text)
+}
+:root[data-theme='light'] {
+    --background: var(--light-bg);
+    --text: var(--light-text)
+}
