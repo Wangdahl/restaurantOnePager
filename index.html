@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Waypost - Fine Dining</title>
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/main.js" defer></script>
+    <script src="./js/mobileMenu.js" defer></script>
+    <script src="./js/darkmode.js" defer></script>
 </head>
 <body>
     <header>
-        <nav id="big-nav">
-            <ul>
-                <li><a href="#banner">Start</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#specials">Specials</a></li>
-                <li><a href="#reservation">Reservations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <nav id="mobile-nav">
-            <ul>
-                <li><a href="#banner">Start</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#specials">Specials</a></li>
-                <li><a href="#reservation">Reservations</a></li>
-                <li><a href="#visist">Visit us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <nav class="main-nav">
+                <ul>
+                    <li><a class="menu-link" href="#banner">Start</a></li>
+                    <li><a class="menu-link" href="#about">About</a></li>
+                    <li><a class="menu-link" href="#menu">Menu</a></li>
+                    <li><a class="menu-link" href="#specials">Specials</a></li>
+                    <li><a class="menu-link" href="#reservation">Reservations</a></li>
+                    <li><a class="menu-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Open navigation menu">☰</button>    
+        </div>
+        <fieldset class="header__toggle toggle" aria-label="theme switcher" role="radiogroup">
+            <label for="dark"><i class="fa-regular fa-moon"></i></label>
+            <div class="toggle__wrapper">
+                <span aria-hidden="true" class="toggle__background"></span>
+                <input type="radio" name="theme" id="dark">
+                <input type="radio" name="theme" id="light">
+                <span aria-hidden="true" class="toggle__button"></span>
+            </div>
+            <label for="light"><i class="fa-regular fa-sun"></i></label>
+        </fieldset>
     </header>
     <main>
         <section class="container" id="banner">

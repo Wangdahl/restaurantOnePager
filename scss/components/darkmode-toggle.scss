@@ -1,0 +1,76 @@
+@use '../utils/utils_index' as *;
+
+
+.toggle {
+    position:absolute;
+    justify-self: flex-end;
+    border: none;
+    gap: $space-xs;
+    margin: 0 auto;
+    right: $space-s;
+    left: auto;
+    top: $space-s;
+    @include flex-center;
+    @include breakpoint(medium) {
+        margin: 0;
+        padding: 0;
+    }
+    label {
+        display: none;
+        align-self: center;
+        color: var(--text);
+        @include breakpoint(medium) {
+            display: block;
+        }
+        &[for="dark"] {
+            justify-self: end;
+        }
+        i {
+            font-size: 1rem;
+            color: var(--text);
+        }
+    }
+    &__wrapper {
+        position: relative;
+
+        height: 24px;
+    }
+    input[type="radio"] {
+        margin: 2px -2px;
+        opacity: 0%;
+        width: 20px;
+        height: 20px;
+
+        &:focus  ~ .toggle__button {
+            border: 1px solid var(--primary)
+        }
+    }
+    &__background {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(225deg, var(--text) 0%, var(--primary) 98.02%);
+        border-radius: 12px;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        pointer-events: none;
+    }
+    &__button {
+        position: absolute;
+        margin: -0.2px 0;
+        left: 3px;
+        right: calc(100% - 20px);
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: var(--background);
+        top: 3px;
+        transition: all 150ms ease-in-out;
+    }
+    #light:checked ~ .toggle__button{
+        right: 3px;
+        left: calc(100% - 22px);
+    }
+
+}

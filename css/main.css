@@ -1,0 +1,304 @@
+button {
+  background-color: var(--primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: var(--dark-text);
+  border: none;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 9rem;
+}
+
+.main-nav {
+  display: none;
+  flex-wrap: wrap;
+}
+@media (min-width: 1024px) {
+  .main-nav {
+    display: block;
+  }
+}
+.main-nav.open {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 100%;
+  padding: 1rem;
+  z-index: 2;
+  background-color: var(--background);
+  box-shadow: 0 0 5px var(--text);
+}
+.main-nav ul {
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.main-nav ul a {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.menu-toggle {
+  display: block;
+  position: absolute;
+  width: auto;
+  top: 0;
+  left: 0;
+  color: var(--text);
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+    background: none;
+  }
+}
+
+.toggle {
+  position: absolute;
+  justify-self: flex-end;
+  border: none;
+  gap: 0.5rem;
+  margin: 0 auto;
+  right: 1rem;
+  left: auto;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .toggle {
+    margin: 0;
+    padding: 0;
+  }
+}
+.toggle label {
+  display: none;
+  align-self: center;
+  color: var(--text);
+}
+@media (min-width: 1024px) {
+  .toggle label {
+    display: block;
+  }
+}
+.toggle label[for=dark] {
+  justify-self: end;
+}
+.toggle label i {
+  font-size: 1rem;
+  color: var(--text);
+}
+.toggle__wrapper {
+  position: relative;
+  height: 24px;
+}
+.toggle input[type=radio] {
+  margin: 2px -2px;
+  opacity: 0%;
+  width: 20px;
+  height: 20px;
+}
+.toggle input[type=radio]:focus ~ .toggle__button {
+  border: 1px solid var(--primary);
+}
+.toggle__background {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(225deg, var(--text) 0%, var(--primary) 98.02%);
+  border-radius: 12px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+.toggle__button {
+  position: absolute;
+  margin: -0.2px 0;
+  left: 3px;
+  right: calc(100% - 20px);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--background);
+  top: 3px;
+  transition: all 150ms ease-in-out;
+}
+.toggle #light:checked ~ .toggle__button {
+  right: 3px;
+  left: calc(100% - 22px);
+}
+
+:root {
+  --light-bg: rgba(250, 249, 246, 1);
+  --light-text: rgba(51, 51, 51, 1);
+  --primary: rgba(196, 71, 39, 1);
+  --primary-hover: rgba(196, 71, 39, 0.8);
+  --dark-bg: rgba(44, 44, 44, 1);
+  --dark-text: rgba(250, 249, 246, 1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light-bg);
+    --text: var(--light-text) ;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-bg);
+    --text: var(--dark-text) ;
+  }
+}
+:root[data-theme=dark] {
+  --background: var(--dark-bg);
+  --text: var(--dark-text) ;
+}
+
+:root[data-theme=light] {
+  --background: var(--light-bg);
+  --text: var(--light-text) ;
+}
+
+:root, body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+h1, h2, h3, h4, #catchphrase {
+  font-family: "Merriweather", serif;
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.375rem;
+  }
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+@media (min-width: 768px) {
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 1.375rem;
+  }
+}
+
+p, li, span, label, input, textarea, a {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  min-height: 4rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--background);
+  padding: 1rem;
+  box-shadow: 0 0 5px var(--text);
+}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+section {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media (min-width: 768px) {
+  section {
+    padding: 4rem 2rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+}
+
+/*# sourceMappingURL=main.css.map */

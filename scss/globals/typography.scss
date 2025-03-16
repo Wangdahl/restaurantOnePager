@@ -1,0 +1,63 @@
+@use '../utils/utils_index'as *;
+
+:root, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+h1, h2, h3, h4, #catchphrase {
+    font-family: 'Merriweather', serif;
+    line-height: 1.2;
+    margin: 0 0 $space-s 0;
+}
+
+h1 {
+    font-size: 2rem;
+    @include breakpoint(small) {
+        font-size: 2.25rem;
+    }
+    @include breakpoint(medium){
+        font-size: 2.5rem;
+    }
+}
+h2 {
+    font-size: 1.5rem;
+    @include breakpoint(small) {
+        font-size: 1.75rem;
+    }
+    @include breakpoint(medium){
+        font-size: 2rem;
+    }
+}
+h3 {
+    font-size: 1.25rem;
+    @include breakpoint(small) {
+        font-size: 1.375rem;
+    }
+    @include breakpoint(medium){
+        font-size: 1.5rem;
+    }
+}
+h4 {
+    font-size: 1.125rem;
+    @include breakpoint(small) {
+        font-size: 1.25rem;
+    }
+    @include breakpoint(medium){
+        font-size: 1.375rem;
+    }
+}
+
+p, li, span, label, input, textarea, a {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, li {
+    list-style: none;
+}

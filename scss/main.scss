@@ -1,0 +1,11 @@
+@use './components/components_index';
+@use './globals/globals_index';
+@use './layout/layout_index';
+
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--background);
+}

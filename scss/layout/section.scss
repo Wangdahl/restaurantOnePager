@@ -1,0 +1,15 @@
+@use '../utils/utils_index' as *;
+
+section {
+    padding: $space-m $space-s;
+    margin: 0 auto;
+    max-width: 1200px;
+    
+    @include breakpoint(small) {
+        padding: $space-l $space-m;
+
+    }
+}
+.container {
+
+}
