@@ -12,10 +12,10 @@
         left: 0;
         top: $space-l;
         width: 100%;
-        padding: $space-s;
+        padding: calc($space-s - 2px);
         z-index: 2;
         background-color: var(--background);
-        box-shadow: 0 0 5px var(--text);
+        box-shadow: 0 5px 5px -5px var(--text);
     }
     ul {
         gap: $space-s;

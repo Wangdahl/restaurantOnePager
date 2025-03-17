@@ -1,3 +1,8 @@
+// Dark / light mode toggle functionality
+// Code based on blog post by Andy Bell - https://piccalil.li/blog/create-a-user-controlled-dark-or-light-mode/ 
+// and FreeCodeCamp's YouTube - https://www.youtube.com/watch?v=krfUjg0S2uI&list=PLWKjhJtqVAbmMuZ3saqRIBimAKIMYkt0E&index=7&t=25262s&ab_channel=freeCodeCamp.org
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const darkBtn = document.getElementById('dark');
     const lightBtn = document.getElementById('light');

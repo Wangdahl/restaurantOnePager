@@ -38,7 +38,7 @@
     input[type="radio"] {
         margin: 2px -2px;
         opacity: 0%;
-        width: 20px;
+        width: $space-m;
         height: 20px;
 
         &:focus  ~ .toggle__button {

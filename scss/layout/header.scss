@@ -6,11 +6,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 5;
     background-color: var(--background);
     padding: $space-s;
-    box-shadow: 0 0 5px var(--text);
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
     @include breakpoint(medium) {
         @include flex-center;
+    }
+    &.scrolled:not(.menu-open) {
+        box-shadow: 0 0 5px var(--text);
     }
 }

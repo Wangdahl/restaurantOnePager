@@ -25,10 +25,10 @@ button {
   left: 0;
   top: 4rem;
   width: 100%;
-  padding: 1rem;
+  padding: calc(1rem - 2px);
   z-index: 2;
   background-color: var(--background);
-  box-shadow: 0 0 5px var(--text);
+  box-shadow: 0 5px 5px -5px var(--text);
 }
 .main-nav ul {
   gap: 1rem;
@@ -108,7 +108,7 @@ button {
 .toggle input[type=radio] {
   margin: 2px -2px;
   opacity: 0%;
-  width: 20px;
+  width: 2rem;
   height: 20px;
 }
 .toggle input[type=radio]:focus ~ .toggle__button {
@@ -269,10 +269,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 5;
   background-color: var(--background);
   padding: 1rem;
-  box-shadow: 0 0 5px var(--text);
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
 }
 @media (min-width: 1024px) {
   header {
@@ -280,6 +281,9 @@ header {
     justify-content: center;
     align-items: center;
   }
+}
+header.scrolled:not(.menu-open) {
+  box-shadow: 0 0 5px var(--text);
 }
 
 section {
