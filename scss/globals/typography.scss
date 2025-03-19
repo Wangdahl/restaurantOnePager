@@ -19,11 +19,12 @@ h1 {
         font-size: 2.25rem;
     }
     @include breakpoint(medium){
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 }
 h2 {
     font-size: 1.5rem;
+    margin-bottom: $space-m;
     @include breakpoint(small) {
         font-size: 1.75rem;
     }
