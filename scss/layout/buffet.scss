@@ -1,0 +1,24 @@
+@use '../utils/utils_index' as *;
+
+.buffet {
+    @include breakpoint(medium) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-m;
+        &__h2, &__intro {
+            grid-column: span 2;
+        }
+    }
+    &__card {
+        margin-top: $space-s;
+        @include breakpoint(medium) {
+            margin-top: 0;
+        }
+        &__list {
+            padding-top: $space-xs;
+            li {
+                list-style: inside;
+            }
+        }
+    }
+}

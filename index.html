@@ -20,8 +20,9 @@
                     <li><a class="menu-link" href="#banner">Start</a></li>
                     <li><a class="menu-link" href="#about">About</a></li>
                     <li><a class="menu-link" href="#menu">Menu</a></li>
-                    <li><a class="menu-link" href="#specials">Specials</a></li>
+                    <li><a class="menu-link" href="#buffet">Lunch Buffet</a></li>
                     <li><a class="menu-link" href="#reservation">Reservations</a></li>
+                    <li><a class="menu-link" href="#visit">Visit us</a></li>
                     <li><a class="menu-link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -40,6 +41,8 @@
         </fieldset>
     </header>
     <main>
+        <!--Styling for each section can be found in scss file with matching name.-->
+        <!--Banner section with CTA-->
         <section class="container banner" id="banner">
             <div class="banner__text">
                 <h1>The Waypost</h1>
@@ -47,9 +50,10 @@
             </div>
             <div class="banner__cta-box cta-box">
                 <a href="#reservation" class="cta banner__cta-box__cta">Book a Table</a>
-                <a href="#menu" class="cta banner__cta">View Menu</a>
+                <a href="#menu" class="cta banner__cta-box__cta">View Menu</a>
             </div>
         </section>
+        <!--About section-->
         <section class="container about" id="about">
             <div class="about__text">
                 <h2 class="about__heading">A Journey in Every Meal</h2>
@@ -71,43 +75,224 @@
                 <img src="/assets/images/about-image.jpg" alt="">
             </div>
         </section>
-        <section class="container" id="menu">
-            <h2>The Waypost Menu – Crafted with Care, Inspired by Season</h2>
+        <!--Menu section-->
+        <section class="container menu" id="menu">
+            <h2 class="menu__heading">The Waypost Menu – Crafted with Care, Inspired by Season</h2>
+            
+            <h3>Entrees</h3>
             <div class="card">
-                <h3>Charred Heritage Carrots</h3>
-                <img src="" alt="">
-                <p>Fire-kissed heirloom carrots, draped in velvety tahini yogurt, finished with smoked honey and toasted pistachios for a perfect balance of earthiness and sweetness.</p>
+                <img class="card__img" src="./assets/images/entree.jpg" alt="entree placeholder">
+                <h4>Smoked Beet Carpaccio</h4>
+                <p>Thinly sliced smoked beets layered with whipped goat cheese, candied walnuts, and a balsamic reduction for a refreshing yet earthy start.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $12</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>Dairy</li>
+                            <li>Nuts</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="card">
-                <h3>Dry-Aged Ribeye with Black Garlic Butter</h3>
-                <img src="" alt="">
-                <p>Seared to perfection, our 30-day dry-aged ribeye is bathed in umami-rich black garlic butter and served alongside crisp rosemary potatoes and charred broccolini.</p>
+                <img class="card__img" src="./assets/images/entree.jpg" alt="entree placeholder">
+                <h4>Crispy Duck Confit Bites</h4>
+                <p>Shredded duck confit, fried to golden perfection, served with a tangy plum sauce and microgreens for a delightful contrast of textures.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $15</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>None</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="card">
-                <h3>Seared Scallops & Corn Purée</h3>
-                <img src="" alt="">
-                <p>Plump, golden-seared scallops rest on a silky bed of sweet corn purée, accented with crispy pancetta, pickled shallots, and a drizzle of chili oil.</p>
+                <img class="card__img" src="./assets/images/entree.jpg" alt="entree placeholder">
+                <h4>Grilled Octopus with Romesco</h4>
+                <p>Charred Spanish octopus, served over a smoky almond and red pepper romesco, finished with fresh lemon zest and toasted garlic chips.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $18</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>Nuts</li>
+                            <li>Shellfish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <h3>Main Courses</h3>
+            <div class="card">
+                <img class="card__img" src="./assets/images/main.jpg" alt="main course placeholder">
+                <h4>Slow-Braised Short Rib</h4>
+                <p>Meltingly tender short rib, braised in red wine and rosemary, served atop a creamy celeriac purée with charred root vegetables.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $28</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>None</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="card">
-                <h3>Wild Mushroom & Truffle Risotto</h3>
-                <img src="" alt="">
-                <p>Creamy Arborio rice, slow-cooked with foraged mushrooms, finished with shaved black truffle, aged Parmesan, and a whisper of white truffle oil.</p>
+                <img class="card__img" src="./assets/images/main.jpg" alt="main course placeholder">
+                <h4>Lemon-Herb Branzino</h4>
+                <p>Oven-roasted Mediterranean sea bass, dressed in a bright citrus herb sauce, accompanied by saffron-infused couscous and blistered cherry tomatoes.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $32</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>Fish</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="card">
-                <h3>Dark Chocolate & Sea Salt Tart</h3>
-                <img src="" alt="">
-                <p>A luscious dark chocolate ganache nestled in a crisp cocoa crust, topped with flakes of Maldon sea salt and a dollop of espresso cream for the perfect sweet-salty indulgence.</p>
+                <img class="card__img" src="./assets/images/main.jpg" alt="main course placeholder">
+                <h4>Truffle & Parmesan Gnocchi</h4>
+                <p>Pillowy handmade gnocchi tossed in a rich truffle cream sauce, finished with aged Parmesan, crispy sage, and black pepper.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $24</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>Dairy</li>
+                            <li>Gluten</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <h3>Desserts</h3>
+            <div class="card">
+                <img class="card__img" src="./assets/images/dessert.jpg" alt="dessert placeholder">
+                <h4>Honey-Lavender Panna Cotta</h4>
+                <p>A delicate lavender-infused panna cotta, drizzled with wildflower honey and topped with toasted almonds for a floral, creamy delight.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $10</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>Dairy</li>
+                            <li>Nuts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="./assets/images/dessert.jpg" alt="dessert placeholder">
+                <h4>Maple Pecan Bread Pudding</h4>
+                <p>Warm and comforting brioche bread pudding, infused with maple syrup, topped with spiced pecans and a bourbon caramel drizzle.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $12</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>Dairy</li>
+                            <li>Gluten</li>
+                            <li>Nuts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card__img" src="./assets/images/dessert.jpg" alt="dessert placeholder">
+                <h4>Blackberry & Lemon Sorbet</h4>
+                <p>A refreshing house-made sorbet bursting with tart blackberries and bright lemon, served with a basil garnish for a zesty finish.</p>
+                <div class="card__info">
+                    <p class="card__bold">Price: $8</p>
+                    <div class="card__allergies">
+                        <p class="card__bold">Allergies:</p>
+                        <ul>
+                            <li>None</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__build-box">
+                <div></div>
+                <h3>Build your own menu</h3>
+                <p>Would you like to pre-plan your meal or just see how much it will cost? Try our build your own menu feature.</p>
+                <a href="" class="cta">Build menu</a>
             </div>
         </section>
-        <section class="container" id="specials">
-            <h2>Today's Special</h2>
-            <h3>Saffron-Poached Halibut with Spring Pea Velouté</h3>
-            <p>Delicately poached in a golden saffron broth, our line-caught halibut melts in your mouth, balanced by a velvety spring pea velouté and a crisp citrus gremolata. Finished with first-of-the-season morel mushrooms, this limited-time dish captures the freshest flavors of early spring—available only while these peak ingredients last.</p>
+        <!-- Buffet section-->
+        <section class="container buffet" id="buffet">
+            <h2 class="buffet__h2">Lunch Buffet</h2>
+            <p class="buffet__intro">Join us for our exquisite lunch buffet, available Monday through Friday. Come enjoy a rotating selection of seasonal dishes, crafted with fresh ingredients to offer a variety of flavors every day. No reservations needed—just drop in and savor the flavors.</p>
+
+            <div class="buffet__card card">
+                <h3>Serving Times</h3>
+                <ul>
+                    <li><strong>Monday:</strong> 11:30 AM - 2:30 PM</li>
+                    <li><strong>Tuesday:</strong> 11:30 AM - 2:30 PM</li>
+                    <li><strong>Wednesday:</strong> 11:30 AM - 2:30 PM</li>
+                    <li><strong>Thursday:</strong> 11:30 AM - 2:30 PM</li>
+                    <li><strong>Friday:</strong> 11:30 AM - 3:00 PM</li>
+                </ul>                
+            </div>
+            
+            <div class="buffet__card card">
+                <h3>Daily Specials</h3>
+                <p>Each day, our chefs prepare special dishes to complement our buffet selection. Today's highlights include:</p>
+                <ul class="buffet__card__list">
+                    <li>Herb-Crusted Salmon with Lemon Butter Sauce</li>
+                    <li>Slow-Roasted Porchetta with Rosemary Jus</li>
+                    <li>Butternut Squash Risotto with Aged Parmesan</li>
+                    <li>Freshly Baked Sourdough Bread & Artisanal Cheeses</li>
+                </ul>
+            </div>
+            
+            <div class="buffet__card card">
+                <h3>Pricing</h3>
+                <p>All buffet options include unlimited access to our fresh salad bar, warm bread station, and soup of the day.</p>
+                <ul class="buffet__card__list">
+                    <li><strong>Standard Buffet:</strong> $18.99 per person</li>
+                    <li><strong>Buffet + Dessert:</strong> $22.99 per person</li>
+                    <li><strong>Buffet + Beverage:</strong> $21.99 per person</li>
+                    <li><strong>Children (under 12):</strong> $10.99 per child</li>
+                </ul>
+            </div>
+            
+            <div class="buffet__card card">
+                <h3>Beverage Options</h3>
+                <p>Enhance your meal with a selection of beverages:</p>
+                <ul class="buffet__card__list">
+                    <li>Freshly Brewed Coffee & Tea</li>
+                    <li>Homemade Lemonade & Iced Tea</li>
+                    <li>Soft Drinks & Sparkling Water</li>
+                    <li>Wine & Craft Beer (available at additional cost)</li>
+                </ul>
+            </div>
         </section>
-        <section class="container" id="reservation">
+        <!--Reservation section-->
+        <section class="container reserve" id="reservation">
             <h2>Reserve Your Table</h2>
-            <p>Join us for an unforgettable dining experience—whether it’s a special celebration or a quiet evening of indulgence. Book your table online or by phone, and let us know if you're celebrating—we’d love to make it extra special!</p>
+            <p>Join us for an unforgettable dining experience—whether it’s a special celebration or a quiet evening of indulgence. Book your table online and let us know if you're celebrating—we’d love to make it extra special.</p>
+            <div class="reserve__box">
+                <form class="reserve__box__form form-box" action="">
+                    <label for="form-name">Name</label>
+                    <input class="reserve__box__form__field" id="form-name" type="text">
+                    <label for="form-email">E-mail</label>
+                    <input class="reserve__box__form__field" id="form-email" type="text">
+                    <label for="form-guests">Guests</label>
+                    <input class="reserve__box__form__field" id="form-guests" type="number">
+                    <label for="form-date">Date</label>
+                    <input class="reserve__box__form__field" type="date" name="form-date" id="form-date">
+                    <label for="form-time">Time</label>
+                    <input class="reserve__box__form__field" type="time" name="time" id="form-time">
+                    <input class="cta" type="submit" id="form-btn" value="reserve">
+                </form>
+            </div>
         </section>
+        <!-- visit section-->
         <section id="visit">
             <div class="visit-text-box">
                 <h2>Visit the Waypost</h2>
@@ -116,13 +301,17 @@
             <div>
                 <h3>Opening Hours</h3>
                 <ul>
-                    <li>Monday – Thursday: 5 PM – 10 PM</li>
-                    <li>Friday – Saturday: 5 PM – 11:30 PM</li>
-                    <li>Sunday Brunch: 10 AM – 2 PM</li>
+                    <li><strong>Monday – Thursday Lunch:</strong> 11:30 AM – 2:30 PM</li>
+                    <li><strong>Monday – Thursday Dinner:</strong> 5:00 PM – 10:00 PM</li>
+                    <li><strong>Friday Lunch:</strong> 11:30 AM – 3:00 PM</li>
+                    <li><strong>Friday – Saturday Dinner:</strong> 5:00 PM – 11:30 PM</li>
+                    <li><strong>Sunday Brunch:</strong> 10:00 AM – 2:00 PM</li>
                 </ul>
+                
             </div>
         </section>
     </main>
+    <!-- Footer -->
     <footer id="contact">
         <div class="adress-box">
             <ul>

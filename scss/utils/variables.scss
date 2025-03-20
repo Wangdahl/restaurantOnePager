@@ -1,3 +1,5 @@
+@use "sass:math";
+
 //Spacing
 $space-xs: 0.5rem;
 $space-s: 1rem;
@@ -8,6 +10,6 @@ $space-xl: 6rem;
 //Aspect ratios
 $ratio-2-1: 2;
 $ratio-3-2: 1.5;
-$ratio-2-3: 2/3;
-$ratio-16-9: 16/9;
+$ratio-2-3: math.div(2, 3);
+$ratio-16-9: math.div(16, 9);
 $ratio-gold: 1.618;

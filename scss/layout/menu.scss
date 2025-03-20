@@ -1,0 +1,38 @@
+@use '../utils/utils_index' as *;
+
+.menu {
+
+    @include breakpoint(small) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space-s;
+    }
+    &__heading {
+        margin-bottom: 0;
+        @include breakpoint(small) {
+            margin-bottom: $space-m;
+            grid-column: span 3;
+        }
+    }
+    h3 {
+        grid-column: span 3;
+        padding-top: $space-m;
+        align-self: flex-start;
+        
+    }
+    &__build-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .cta {
+            margin-top: $space-s;
+        }
+        @include breakpoint(small) {
+            grid-column: span 3;
+            p {
+                align-self: flex-start;
+            }
+
+        }
+    }
+}

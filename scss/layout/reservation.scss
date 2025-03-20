@@ -1,0 +1,24 @@
+@use '../utils/utils_index' as *;
+
+.reserve {
+    &__box {
+        &__form {
+            display: flex;
+            flex-direction: column;
+            padding: $space-m;
+            label {
+                color: text;
+                padding-top: $space-xs;
+            }
+            &__field {
+                padding: $space-xs;
+                border: solid thin var(--primary);
+                border-radius: 3px;
+                color: text;
+            }
+            #form-btn {
+                margin-top: $space-m;
+            }
+        }
+    }
+}

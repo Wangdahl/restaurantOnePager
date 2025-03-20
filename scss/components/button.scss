@@ -25,4 +25,6 @@ button {
     border-radius: 4px;
     padding: $space-s;
     width: 9rem;
+    box-shadow: 0 0 5px var(--text);
+    align-self: center;
 }

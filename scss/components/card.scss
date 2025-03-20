@@ -1,0 +1,27 @@
+//Styling for menu cards
+@use '../utils/utils_index' as *;
+.card {
+    padding: $space-s;
+    overflow: none;
+    border-radius: 3px;
+    ul, li {
+        list-style:inside;
+    }
+    @include breakpoint(small) {
+        box-shadow: 0 0 5px var(--primary-hover);
+    }
+    &__info {
+        margin-top: $space-s;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bold {
+        font-weight: bold;
+    }
+    &__img {
+        max-width: 100%;
+        aspect-ratio: $ratio-3-2;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+}
