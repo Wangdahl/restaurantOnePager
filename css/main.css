@@ -227,6 +227,10 @@ button {
   margin-bottom: 2rem;
 }
 
+.remove-icon {
+  transform: rotate(45deg);
+}
+
 :root {
   --light-bg: rgba(250, 249, 246, 1);
   --light-text: rgba(51, 51, 51, 1);
