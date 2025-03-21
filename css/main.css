@@ -24,6 +24,7 @@ button {
   width: 9rem;
   box-shadow: 0 0 5px var(--text);
   align-self: center;
+  cursor: pointer;
 }
 
 .card {
@@ -184,6 +185,46 @@ button {
 .toggle #light:checked ~ .toggle__button {
   right: 3px;
   left: calc(100% - 22px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal__content {
+  background-color: var(--background);
+  margin: 25% auto;
+  padding: 2rem;
+  box-shadow: 0 0 5px var(--primary-hover);
+  border-radius: 3px;
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal__content .close-button {
+  color: var(--text);
+  font-size: 1.5rem;
+  text-align: right;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+.modal__content .close-button :hover {
+  transform: scale(1.2);
+}
+.modal__content #modal-message {
+  margin-bottom: 2rem;
 }
 
 :root {
@@ -531,46 +572,6 @@ section {
 .reserve__box__form #form-btn {
   margin-top: 2rem;
   cursor: pointer;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-.modal__content {
-  background-color: var(--background);
-  margin: 25% auto;
-  padding: 2rem;
-  box-shadow: 0 0 5px var(--primary-hover);
-  border-radius: 3px;
-  width: 80%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.modal__content .close-button {
-  color: var(--text);
-  font-size: 1.5rem;
-  text-align: right;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  align-self: flex-end;
-  justify-self: flex-start;
-}
-.modal__content .close-button :hover {
-  transform: scale(1.2);
-}
-.modal__content #modal-message {
-  margin-bottom: 2rem;
 }
 
 html {

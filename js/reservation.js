@@ -53,7 +53,7 @@ const time = document.getElementById('form-time');
 // Modal elements
 const modal = document.getElementById('reservationModal');
 const modalMessage = document.getElementById('modal-message');
-const closeButton = document.querySelector('.close-button');
+const closeButton = document.getElementById('reservation-close');
 
 //Form validation and modal trigger
 form.addEventListener('submit', (event) => {
@@ -108,6 +108,6 @@ form.addEventListener('submit', (event) => {
 closeButton.addEventListener('click', () => {
     modal.style.display = 'none';
 });
-window.addEventListener('click', (event) => {
+window.addEventListener('click', () => {
     modal.style.display = 'none';
-})
+});
