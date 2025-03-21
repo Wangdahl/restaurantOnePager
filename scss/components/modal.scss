@@ -1,4 +1,5 @@
 @use '../utils/utils_index' as *;
+//Styling modal popups and ensures functionality (hiding / showing)
 .modal {
     display: none;
     position: fixed;
@@ -40,6 +41,50 @@
 }
 
 // Build menu modal specific
+#menu-modal-content {
+        @include flex-center;
+    h2 {
+        margin-top: $space-s;
+    }
+    h3 {
+        padding-bottom: 0;
+        margin-bottom: $space-xs;
+    }
+    h4 {
+        padding-top: $space-s;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        span {
+            margin-left: $space-xs;
+        }
+    }
+    i {
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding-right: $space-xs;
+
+    }
+    #custom-menu {
+        display: flex;
+        flex-direction: column;
+        @include breakpoint('small') {
+            width: 70%;
+        }
+        p {
+            align-self: center;
+            font-weight: bold;
+            margin: $space-s;
+        }
+    }
+    #modal-menu-display {
+        @include breakpoint('small') {
+            width: 70%;
+        }
+    }
+}
 .remove-icon {
     transform: rotate(45deg);
+    font-size: 1.5rem;
 }

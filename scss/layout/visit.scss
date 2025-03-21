@@ -1,0 +1,16 @@
+@use '../utils/utils_index' as *;
+//Styling the visit section
+.visit {
+    overflow: none;
+    &__map {
+        width: 100%;
+        height: 300px;
+        margin: $space-s 0;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 0 5px var(--primary-hover);
+        @include breakpoint('medium') {
+            height: 500px;
+        }
+    }
+}

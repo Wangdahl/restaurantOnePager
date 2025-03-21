@@ -1,0 +1,19 @@
+@use '../utils/utils_index' as *;
+//Footer styling
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: $space-m;
+    @include breakpoint('medium') {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .footer-box {
+        margin-top: $space-s;
+        p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: $space-xs;
+        }
+    }
+}

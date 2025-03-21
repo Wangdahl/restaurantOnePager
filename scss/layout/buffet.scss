@@ -1,13 +1,38 @@
 @use '../utils/utils_index' as *;
-
+//Buffet section styling
 .buffet {
     @include breakpoint(medium) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: $space-m;
+        &__button {
+            grid-column: span 2;
+            cursor: pointer;
+            i {
+                margin-left: $space-m;
+                transition: transform 1s ease;
+            }
+            &.open i {
+                transform: rotate(180deg);
+            }
+        }        
         &__h2, &__intro {
             grid-column: span 2;
         }
+    }
+    //Animations for showing / hiding the buffet info smoothly
+    .buffet__card.hide {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-20px);
+        transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+    }
+    .buffet__card.show {
+        max-height: 1000px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
     }
     &__card {
         margin-top: $space-s;

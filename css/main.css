@@ -227,8 +227,56 @@ button {
   margin-bottom: 2rem;
 }
 
+#menu-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu-modal-content h2 {
+  margin-top: 1rem;
+}
+#menu-modal-content h3 {
+  padding-bottom: 0;
+  margin-bottom: 0.5rem;
+}
+#menu-modal-content h4 {
+  padding-top: 1rem;
+}
+#menu-modal-content li {
+  display: flex;
+  align-items: center;
+}
+#menu-modal-content li span {
+  margin-left: 0.5rem;
+}
+#menu-modal-content i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+#menu-modal-content #custom-menu {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #menu-modal-content #custom-menu {
+    width: 70%;
+  }
+}
+#menu-modal-content #custom-menu p {
+  align-self: center;
+  font-weight: bold;
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  #menu-modal-content #modal-menu-display {
+    width: 70%;
+  }
+}
+
 .remove-icon {
   transform: rotate(45deg);
+  font-size: 1.5rem;
 }
 
 :root {
@@ -374,6 +422,26 @@ header {
 }
 header.scrolled:not(.menu-open) {
   box-shadow: 0 0 5px var(--text);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+@media (min-width: 1024px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+footer .footer-box {
+  margin-top: 1rem;
+}
+footer .footer-box p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 section {
@@ -522,9 +590,33 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+  .buffet__button {
+    grid-column: span 2;
+    cursor: pointer;
+  }
+  .buffet__button i {
+    margin-left: 2rem;
+    transition: transform 1s ease;
+  }
+  .buffet__button.open i {
+    transform: rotate(180deg);
+  }
   .buffet__h2, .buffet__intro {
     grid-column: span 2;
   }
+}
+.buffet .buffet__card.hide {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+}
+.buffet .buffet__card.show {
+  max-height: 1000px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
 }
 .buffet__card {
   margin-top: 1rem;
@@ -576,6 +668,23 @@ section {
 .reserve__box__form #form-btn {
   margin-top: 2rem;
   cursor: pointer;
+}
+
+.visit {
+  overflow: none;
+}
+.visit__map {
+  width: 100%;
+  height: 300px;
+  margin: 1rem 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 5px var(--primary-hover);
+}
+@media (min-width: 1024px) {
+  .visit__map {
+    height: 500px;
+  }
 }
 
 html {

@@ -16,6 +16,7 @@
     <script src="./js/darkmode.js" defer></script>
     <script src="./js/reservation.js" defer></script>
     <script src="./js/buildMenu.js" defer></script>
+    <script src="./js/buffet.js" defer></script>
 </head>
 <body>
     <header>
@@ -228,8 +229,9 @@
                 <p>Would you like to pre-plan your meal or just see how much it will cost? Try our build your own menu feature.</p>
                 <button class="cta" id="build-menu-btn">Build menu</button>
             </div>
+            <!--Modal popup for building a meal and see prices-->
             <aside class="modal" id="menuModal">
-                <div class="modal__content">
+                <div class="modal__content" id="menu-modal-content">
                     <span class="close-button" id="menu-modal-close">&times</span>
                     <h2>Your Waypost plan</h2>
                     <div class="modal__content__box" id="custom-menu">
@@ -274,9 +276,9 @@
         <section class="container buffet" id="buffet">
             <h2 class="buffet__h2">Lunch Buffet</h2>
             <p class="buffet__intro">Join us for our exquisite lunch buffet, available Monday through Friday. Come enjoy a rotating selection of seasonal dishes, crafted with fresh ingredients to offer a variety of flavors every day. No reservations needed—just drop in and savor the flavors.</p>
-
-            <div class="buffet__card card">
-                <h3>Serving Times</h3>
+            <h3 class="buffet__button rotate" id="more-info">Find out more<i class="fas fa-chevron-down"></i></h3>
+            <div class="buffet__card card hide">
+                <h4>Serving Times</h4>
                 <ul>
                     <li><strong>Monday:</strong> 11:30 AM - 2:30 PM</li>
                     <li><strong>Tuesday:</strong> 11:30 AM - 2:30 PM</li>
@@ -286,8 +288,8 @@
                 </ul>                
             </div>
             
-            <div class="buffet__card card">
-                <h3>Daily Specials</h3>
+            <div class="buffet__card card hide">
+                <h4>Daily Specials</h4>
                 <p>Each day, our chefs prepare special dishes to complement our buffet selection. Today's highlights include:</p>
                 <ul class="buffet__card__list">
                     <li>Herb-Crusted Salmon with Lemon Butter Sauce</li>
@@ -297,8 +299,8 @@
                 </ul>
             </div>
             
-            <div class="buffet__card card">
-                <h3>Pricing</h3>
+            <div class="buffet__card card hide">
+                <h4>Pricing</h4>
                 <p>All buffet options include unlimited access to our fresh salad bar, warm bread station, and soup of the day.</p>
                 <ul class="buffet__card__list">
                     <li><strong>Standard Buffet:</strong> $18.99 per person</li>
@@ -308,8 +310,8 @@
                 </ul>
             </div>
             
-            <div class="buffet__card card">
-                <h3>Beverage Options</h3>
+            <div class="buffet__card card hide">
+                <h4>Beverage Options</h4>
                 <p>Enhance your meal with a selection of beverages:</p>
                 <ul class="buffet__card__list">
                     <li>Freshly Brewed Coffee & Tea</li>
@@ -347,34 +349,36 @@
             </aside>
         </section>
         <!-- visit section-->
-        <section id="visit">
-            <div class="visit-text-box">
+        <section id="visit" class="visit">
+            <div class="visit__text-box">
                 <h2>Visit the Waypost</h2>
                 <p>We'd love to welcome you to Waypost—where every meal is an experience worth savoring. Whether you're planning a special night out or just stopping by for a memorable meal, we’re here to make it unforgettable.</p>    
             </div>
-            <div>
-                <h3>Opening Hours</h3>
-                <ul>
-                    <li><strong>Monday – Thursday Lunch:</strong> 11:30 AM – 2:30 PM</li>
-                    <li><strong>Monday – Thursday Dinner:</strong> 5:00 PM – 10:00 PM</li>
-                    <li><strong>Friday Lunch:</strong> 11:30 AM – 3:00 PM</li>
-                    <li><strong>Friday – Saturday Dinner:</strong> 5:00 PM – 11:30 PM</li>
-                    <li><strong>Sunday Brunch:</strong> 10:00 AM – 2:00 PM</li>
-                </ul>
-                
-            </div>
+            <iframe class="visit__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7059.991857260078!2d-133.48252151369246!3d63.74445267509624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x515b2917a3ff7001%3A0x5cb74e2f200d75e5!2sLansing%2C%20YT%20Y0A%200A2%2C%20Canada!5e0!3m2!1sen!2sse!4v1742572721605!5m2!1sen!2sse" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
     </main>
     <!-- Footer -->
     <footer id="contact">
-        <div class="adress-box">
+        <div class="footer-box">
+            <p>Opening Hours:</p>
             <ul>
-                <li>1521 Alder Street, Brookhaven</li>
+                <li><strong>Monday – Thursday Lunch:</strong> 11:30 AM – 2:30 PM</li>
+                <li><strong>Monday – Thursday Dinner:</strong> 5:00 PM – 10:00 PM</li>
+                <li><strong>Friday Lunch:</strong> 11:30 AM – 3:00 PM</li>
+                <li><strong>Friday – Saturday Dinner:</strong> 5:00 PM – 11:30 PM</li>
+                <li><strong>Sunday Brunch:</strong> 10:00 AM – 2:00 PM</li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <p>Contact us:</p>
+            <ul>
+                <li>1521 Alder Street, Lansing</li>
                 <li>(555) 892-3471</li>
                 <li>info@waypostdining.com</li>
             </ul>
         </div>
-        <div class="adress-box">
+        <div class="footer-box">
+            <p>Follow us:</p>
             <ul>
                 <li>Instagram: @WaypostDining</li>
                 <li>Facebook: Waypost Restaurant</li>
