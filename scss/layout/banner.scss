@@ -10,12 +10,12 @@
     aspect-ratio: $ratio-2-1;
     @include flex-center;
     flex-direction: column;
+    color: var(--dark-text);
     @include breakpoint(large) {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
-    color: var(--dark-text);
 
     &__text {
         display: block;

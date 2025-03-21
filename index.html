@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <script src="./js/menu.js" defer></script>
     <script src="./js/darkmode.js" defer></script>
+    <script src="./js/reservation.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
                     <li><a class="menu-link" href="#menu">Menu</a></li>
                     <li><a class="menu-link" href="#buffet">Lunch Buffet</a></li>
                     <li><a class="menu-link" href="#reservation">Reservations</a></li>
-                    <li><a class="menu-link" href="#visit">Visit us</a></li>
+                    <li><a class="menu-link" href="#visit">Find us</a></li>
                     <li><a class="menu-link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -275,7 +276,7 @@
         <!--Reservation section-->
         <section class="container reserve" id="reservation">
             <h2>Reserve Your Table</h2>
-            <p>Join us for an unforgettable dining experience—whether it’s a special celebration or a quiet evening of indulgence. Book your table online and let us know if you're celebrating—we’d love to make it extra special.</p>
+            <p>Join us for an unforgettable dining experience—whether it’s a special celebration or a quiet evening of indulgence. Book your table online to ensure room for you and your friends.</p>
             <div class="reserve__box">
                 <form class="reserve__box__form form-box" action="">
                     <label for="form-name">Name</label>
@@ -283,20 +284,27 @@
                     <label for="form-email">E-mail</label>
                     <input class="reserve__box__form__field" id="form-email" type="text">
                     <label for="form-guests">Guests</label>
-                    <input class="reserve__box__form__field" id="form-guests" type="number">
+                    <input class="reserve__box__form__field" id="form-guests" type="number" min="1" max="8">
                     <label for="form-date">Date</label>
                     <input class="reserve__box__form__field" type="date" name="form-date" id="form-date">
                     <label for="form-time">Time</label>
-                    <input class="reserve__box__form__field" type="time" name="time" id="form-time">
+                    <input class="reserve__box__form__field" type="time" name="time" id="form-time" max="21:30">
                     <input class="cta" type="submit" id="form-btn" value="reserve">
                 </form>
             </div>
+            <!--Modal popup to confirm reservation-->
+            <aside class="modal" id="reservationModal">
+                <div class="modal__content">
+                    <span class="close-button">&times</span>
+                    <p id="modal-message"></p>
+                </div>
+            </aside>
         </section>
         <!-- visit section-->
         <section id="visit">
             <div class="visit-text-box">
                 <h2>Visit the Waypost</h2>
-                <p>We'd love to welcome you to Waypost—where every meal is an experience worth savoring. Whether you're planning a special night out or just stopping by for a memorable meal, we’re here to make it unforgettable</p>    
+                <p>We'd love to welcome you to Waypost—where every meal is an experience worth savoring. Whether you're planning a special night out or just stopping by for a memorable meal, we’re here to make it unforgettable.</p>    
             </div>
             <div>
                 <h3>Opening Hours</h3>
